@@ -1,3 +1,9 @@
+:root {
+  --primary: #171717;
+  --primary-light: #444444;
+  --white: #ededed;
+  --secondary: #da0037;
+}
 html,
 body {
   /* overflow-x: hidden !important; */
@@ -7,12 +13,13 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   /* font-family: 'Audiowide', cursive;*/
   margin: 0;
-  background-color: #222222;
+  background-color: #171717;
+  color: var(--white);
 }
 
 header {
   /* position: absolute; */
-  background: #222222;
+  background: var(--primary);
   width: 100%;
   z-index: 2;
 }
@@ -26,6 +33,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 70%;
+  margin: auto;
 }
 
 .section-main {

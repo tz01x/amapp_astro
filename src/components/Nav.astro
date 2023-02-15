@@ -1,77 +1,70 @@
 ---
+import Button from "@mui/material/Button";
 const NavitemClass = true;
 ---
+
 <nav>
-<div class='nev-brand'>faceless</div>
-<div class="nev-items">
-  <div class="nev-item">
-    <a href="/">home</a>
+  <div class="nev-brand">ShadowMsg</div>
+  <div class="nev-items">
+    <div class="nev-item">
+      <a href="/#whatsThis">Whats This?</a>
+    </div>
+    <div class="nev-item">
+      <a href="/#faq">FAQ</a>
+    </div>
   </div>
-  <div class="nev-item">
-    
-      <a href="/about">about</a>
-  </div>
-
-</div>
-<div class="burger" >
-  <div class={NavitemClass?'bline1':"bline1 bline1-a"}></div>
-  <div class={NavitemClass?'bline2':"bline2 bline2-a"}></div>
-  <div class={NavitemClass?'bline3':"bline3 bline3-a"}></div>
-</div>
-
-
-
+  <Button
+    sx={{
+      fontSize: "19px",
+      borderRadius: 25,
+      backgroundColor: "var(--secondary)",
+      "&:hover": {
+        backgroundColor: "var(--primary-light)",
+      },
+    }}
+    size="large"
+    variant="filled"
+    client:visible
+  >
+    APP
+  </Button>
 </nav>
 
 <style>
-nav{
-padding: 10px;
-display: flex;
-flex-grow: 1;
-justify-content: space-around;
-align-items: baseline;
-}
+  nav {
+    padding: 10px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 70%;
+    margin: auto;
+  }
 
+  nav .nev-items {
+    display: flex;
+    margin-left: auto;
+  }
+  nav .nev-item {
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 15px;
 
-nav .nev-items{
-  
- display: flex;
- margin-left:auto;
- 
-}
-nav .nev-item{
-  text-transform: uppercase;
-  text-shadow: 0px 0px 1px;
-  letter-spacing: 2px;
-padding: 10px;
-font-weight: 700;
-font-size: 18px;
+    cursor: pointer;
+    /* border-radius: 10px; */
+  }
+  nav .nev-item a {
+    text-decoration: none;
+    color: white;
+  }
 
-
-cursor: pointer;
-/* border-radius: 10px; */
-}
-nav .nev-item a{
-  text-decoration: none;
-  color: white;
-}
-
-
-nav .nev-brand{
-  margin-top: 10px;
-  font-size: 30px;
-  font-weight: 600;
-  color: rgb(111, 201, 150);
-  letter-spacing: 2px;
-  text-shadow: 0px 2px 2px #000000;
-}
-nav .nev-brand::after{
-  content: "tz";
-  font-size: 15px;
-  font-weight: 600;
-position: absolute;
-  bottom: 5;
-}
-
-
+  nav .nev-brand {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(111, 201, 150);
+    text-shadow: 0px 2px 2px #000000;
+  }
 </style>

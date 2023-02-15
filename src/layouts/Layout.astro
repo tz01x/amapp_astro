@@ -1,9 +1,9 @@
 ---
-import Nav from '../components/Nav.astro';
+import Nav from "../components/Nav.astro";
 import "../global.css";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,32 +11,28 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	
-	</head>
-	<body>
-		<header>
-		<Nav/>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <Nav />
+    </header>
 
-		<slot />
-		<footer>
-        <hr></hr>
-        <div>
-          2020-Faceless
-        </div>
-        <div>
-          <!-- <Link to={baseurl} >Home</Link>|<Link to={'./about/'}>About</Link>
+    <slot />
+    <footer>
+      <hr />
+    </footer>
+    <div>2020-Faceless</div>
+    <div>
+      <!-- <Link to={baseurl} >Home</Link>|<Link to={'./about/'}>About</Link>
           {showlogoutUrl()} -->
-        </div>
-      </footer>
-	</body>
+    </div>
+  </body>
 </html>
-<style is:global>
 
-</style>
+<style is:global></style>
